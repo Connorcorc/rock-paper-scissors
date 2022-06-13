@@ -8,23 +8,22 @@ var hardBox = document.querySelector('.image-body-two')
 var imageBox = document.querySelector('.image-body-choice')
 var imageBoxTwo = document.querySelector('.image-body-choice-two')
 var resetGame = document.querySelector('.reset-game')
+var mainOutput = document.querySelector('.header-one')
 var output = document.querySelector('.sub-header-one')
+var playerWins = document.querySelector('.player-wins')
+var computerWins = document.querySelector('.computer-wins')
+var fight = document.querySelector('.fight-scene')
 
 classicBox.addEventListener('click', changeMainBox);
 hardBox.addEventListener('click', changeHardBox);
-imageBox.addEventListener('click', pickFighter)
-imageBoxTwo.addEventListener('click', pickFighter)
+imageBox.addEventListener('click', runGame)
+imageBoxTwo.addEventListener('click', runGame)
 resetGame.addEventListener('click', resetGameButton)
 
-// function show(element) {
-//   element.classList.remove('hidden');
-// };
-//
-// function hide(element) {
-//   element.classList.add('hidden');
-// };
 
 function changeMainBox() {
+  mainOutput.innerHTML = 'Choose your fighter!'
+  output.innerHTML = ''
   game.game = 'normalGame'
   classicBox.classList.add('hidden');
   hardBox.classList.add('hidden');
@@ -33,7 +32,9 @@ function changeMainBox() {
 }
 
 function changeHardBox() {
+  mainOutput.innerHTML = 'Choose your fighter!'
   game.game = 'spicyGame'
+  output.innerHTML = ''
   classicBox.classList.add('hidden');
   hardBox.classList.add('hidden');
   imageBoxTwo.classList.remove('hidden')
@@ -46,13 +47,33 @@ function resetGameButton() {
   imageBoxTwo.classList.add('hidden')
   imageBox.classList.add('hidden')
   resetGame.classList.add('hidden')
-  output.innerHTML = 'Choose your game'
+  output.innerHTML = 'Choose your game';
 }
 
-function pickFighter() {
+function reset() {
+  if (game.game === 'normalGame') {
+    changeMainBox();
+  } else {
+    changeHardBox();
+  }
+  fight.innerHTML = ``;
+}
+
+function runGame() {
   game.player.choice = event.target.id;
   game.computer.setComputerChoice();
-  game.runGame()
+  game.checkForWin();
   game.checkForDraw();
-  console.log(game.player.choice)
+  game.winTally();
+  fightScene();
+  setTimeout(reset, 3000)
+}
+
+function fightScene() {
+  imageBox.classList.add('hidden')
+  imageBoxTwo.classList.add('hidden')
+  fight.innerHTML = `
+  <img src="./rock-paper-scissors-assets/${game.player.choice}.png" class="img" alt="${game.player.choice}"/>
+  <img src="./rock-paper-scissors-assets/${game.computer.choice}.png" class="img" alt="${game.computer.choice}"/>
+  `
 }
