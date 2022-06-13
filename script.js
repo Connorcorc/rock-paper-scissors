@@ -16,16 +16,20 @@ imageBox.addEventListener('click', pickFighter)
 imageBoxTwo.addEventListener('click', pickFighter)
 resetGame.addEventListener('click', resetGameButton)
 
-function hide() {
+// function show(element) {
+//   element.classList.remove('hidden');
+// };
+//
+// function hide(element) {
+//   element.classList.add('hidden');
+// };
 
-}
 function changeMainBox() {
   game.game = 'normalGame'
   classicBox.classList.add('hidden');
   hardBox.classList.add('hidden');
   imageBox.classList.remove('hidden')
   resetGame.classList.remove('hidden')
-  // game.playerChoice();
 }
 
 function changeHardBox() {
@@ -34,14 +38,7 @@ function changeHardBox() {
   hardBox.classList.add('hidden');
   imageBoxTwo.classList.remove('hidden')
   resetGame.classList.remove('hidden')
-  // game.computer.setComputerChoice();
 }
-
-
-// function takeTurn(event) {
-//   this.currentChoice = event.target.id;
-//   game.computer.setComputerChoice();
-// }
 
 function resetGameButton() {
   classicBox.classList.remove('hidden');
@@ -57,6 +54,5 @@ function pickFighter() {
   game.computer.setComputerChoice();
   game.runGame()
   game.checkForDraw();
-  // takeTurn(event)
   console.log(game.player.choice)
 }
