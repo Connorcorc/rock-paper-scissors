@@ -7,7 +7,7 @@ var classicBox = document.querySelector('.image-body-one')
 var hardBox = document.querySelector('.image-body-two')
 var imageBox = document.querySelector('.image-body-choice')
 var imageBoxTwo = document.querySelector('.image-body-choice-two')
-var resetGame = document.querySelector('.reset-game')
+var changeGame = document.querySelector('.change-game')
 var mainOutput = document.querySelector('.header-one')
 var output = document.querySelector('.sub-header-one')
 var playerWins = document.querySelector('.player-wins')
@@ -28,7 +28,7 @@ function changeMainBox() {
   classicBox.classList.add('hidden');
   hardBox.classList.add('hidden');
   imageBox.classList.remove('hidden')
-  resetGame.classList.remove('hidden')
+  changeGame.classList.remove('hidden')
 }
 
 function changeHardBox() {
@@ -38,7 +38,7 @@ function changeHardBox() {
   classicBox.classList.add('hidden');
   hardBox.classList.add('hidden');
   imageBoxTwo.classList.remove('hidden')
-  resetGame.classList.remove('hidden')
+  changeGame.classList.remove('hidden')
 }
 
 function resetGameButton() {
@@ -46,7 +46,7 @@ function resetGameButton() {
   hardBox.classList.remove('hidden');
   imageBoxTwo.classList.add('hidden')
   imageBox.classList.add('hidden')
-  resetGame.classList.add('hidden')
+  changeGame.classList.remove('hidden')
   output.innerHTML = 'Choose your game';
 }
 

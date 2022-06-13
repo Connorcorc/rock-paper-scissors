@@ -12,7 +12,7 @@ class Game {
   playerChoice() {
     if(this.category === 'CLASSIC') {
       this.gameIcons = ['rock', 'paper', 'scissors']
-    } else if (this.category = 'DIFFICULT') {
+    } else if (this.category === 'DIFFICULT') {
       this.gameIcons = ['rock', 'paper', 'scissors', 'lizard', 'aliens']
     }
   }
