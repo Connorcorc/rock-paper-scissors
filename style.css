@@ -46,6 +46,11 @@ body {
 
 }
 .image-body-one, .image-body-two {
+  box-shadow: inset 0 0 0 0 #fff;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   background: rgba(0, 0, 0, 0.5);
   margin-top: 75px;
   padding:10px;
@@ -56,6 +61,11 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.image-body-one:hover, .image-body-two:hover {
+  box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
 }
 
 .image-body-choice, .image-body-choice-two {
@@ -69,8 +79,45 @@ body {
   justify-content: center;
   align-items: center;
 }
-.reset-game {
-  margin-top: 100px;
+button {
+  border-radius: 4px;
+  background-color: #996633;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 .emoji {

@@ -11,17 +11,12 @@ class Player {
     } else if (game.game === 'normalGame') {
       game.computer.choice = normalGame[this.generatePick(normalGame)]
     }
-    console.log(game.computer.choice)
   }
 
   generatePick(array) {
     return Math.floor(Math.random() * array.length);
   };
 
-  // startGame() {
-  //
-  // }
-  //
   winCount() {
     this.wins++;
   }
