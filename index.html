@@ -9,24 +9,47 @@
   </head>
   <body>
     <section class="player-one">
+      <h3 class="emoji">🧍</h3>
       <h2 class="player-one-header">Player 1</h2>
       <h3 class="number-of-wins">Wins:#</h3>
+      <button class="reset-game hidden" type="button">Reset Game</button>
     </section>
     <section class="main-section">
       <h1 class="header-one">Rock, Paper, Scissors</h1>
       <h2 class="sub-header-one">Choose your game</h2>
-        <section class="image-body">
-          <br>CLASSIC</br>
-          <br>rock > scissors</br>
-          <br>paper > Rock<br>
-          <br>scissors > paper</br>
-        </section>
+      <section class="image-body-choice hidden">
+        <img src="./rock-paper-scissors-assets/rock.png" class="img" id='rock'/>
+        <img src="./rock-paper-scissors-assets/happy-paper.png" class="img" id='paper' />
+        <img src="./rock-paper-scissors-assets/lines-scissors.png" class="img" id='scissors' />
+      </section>
+      <section class="image-body-choice-two hidden">
+        <img src="./rock-paper-scissors-assets/rock.png" class="img" id='rock'/>
+        <img src="./rock-paper-scissors-assets/happy-paper.png" class="img" id='paper' />
+        <img src="./rock-paper-scissors-assets/lines-scissors.png" class="img" id='scissors' />
+        <img src="./rock-paper-scissors-assets/flat-lizard.png" class="img" id='lizard' />
+        <img src="./rock-paper-scissors-assets/happy-alien.png" class="img" id='alien' />
+      </section>
+      <section class="image-body-one">
+        <br>CLASSIC</br>
+        <br>rock > scissors</br>
+        <br>paper > Rock</br>
+        <br>scissors > paper</br>
+      </section>
+      <section class="image-body-two">
+        <br>DIFFICULT</br>
+        <br>rock > scissors & lizard</br>
+        <br>paper > rock & alien</br>
+        <br>scissors > paper & lizard</br>
+        <br>lizard > paper & alien</br>
+        <br>alien > scissors & rock</br>
+      </section>
     </section>
     <section class="player-two">
+      <h3 class="emoji"> 🖥️ </h3>
       <h2 class="player-two-header">Player 2</h2>
       <h3 class="number-of-wins">Wins:#</h3>
     </section>
-
-	<script src="index.js"></script>
-  </body>
+  <script type='text/javascript' src="game.js"></script>
+  <script type='text/javascript' src="player.js"></script>
+  <script type='text/javascript' src="script.js"></script>
 </html>
