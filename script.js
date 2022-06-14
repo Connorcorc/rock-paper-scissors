@@ -1,6 +1,6 @@
-var game = new Game();
+var game = new Game()
 
-var normalGame = ['rock', 'paper', 'scissors'];
+var normalGame = ['rock', 'paper', 'scissors']
 var spicyGame = ['rock', 'paper', 'scissors', 'lizard', 'alien']
 
 var classicBox = document.querySelector('.image-body-one')
@@ -14,19 +14,18 @@ var playerWins = document.querySelector('.player-wins')
 var computerWins = document.querySelector('.computer-wins')
 var fight = document.querySelector('.fight-scene')
 
-classicBox.addEventListener('click', changeMainBox);
-hardBox.addEventListener('click', changeHardBox);
+classicBox.addEventListener('click', changeMainBox)
+hardBox.addEventListener('click', changeHardBox)
 imageBox.addEventListener('click', runGame)
 imageBoxTwo.addEventListener('click', runGame)
 changeGame.addEventListener('click', resetGameButton)
 
-
 function show(element) {
-  element.classList.remove('hidden');
-};
+  element.classList.remove('hidden')
+}
 
 function hide(element) {
-  element.classList.add('hidden');
+  element.classList.add('hidden')
 }
 
 function changeMainBox() {
@@ -51,7 +50,7 @@ function changeHardBox() {
 
 function resetGameButton() {
   mainOutput.innerHTML = 'Rock, Paper, Scissors'
-  output.innerHTML = 'Choose your game';
+  output.innerHTML = 'Choose your game'
   show(classicBox)
   show(hardBox)
   hide(imageBoxTwo)
@@ -62,32 +61,31 @@ function resetGameButton() {
 function reset() {
   show(changeGame)
   if (game.game === 'normalGame') {
-    changeMainBox();
+    changeMainBox()
   } else {
-    changeHardBox();
+    changeHardBox()
   }
-  fight.innerHTML = ``;
+  fight.innerHTML = ``
 }
 
 function updateScore() {
-  playerWins.innerHTML = `Wins: ${game.player.wins}`;
-  computerWins.innerHTML = `Wins: ${game.computer.wins}`;
+  playerWins.innerHTML = `Wins: ${game.player.wins}`
+  computerWins.innerHTML = `Wins: ${game.computer.wins}`
 }
 
 function runGame() {
   hide(changeGame)
-  game.player.choice = event.target.id;
-  game.computer.setComputerChoice();
-  game.checkForWin();
-  game.checkForDraw();
-  game.winTally();
-  fightScene();
-  updateScore();
+  game.player.choice = event.target.id
+  game.computer.setComputerChoice()
+  game.checkForWin()
+  game.checkForDraw()
+  game.winTally()
+  fightScene()
+  updateScore()
   setTimeout(reset, 3000)
 }
 
 function fightScene() {
-
   hide(imageBox)
   hide(imageBoxTwo)
   fight.innerHTML = `
@@ -95,10 +93,10 @@ function fightScene() {
   <img src="./rock-paper-scissors-assets/${game.computer.choice}.png" class="img" alt="${game.computer.choice}"/>
   `
   if (game.playerWins === true) {
-    output.innerHTML = 'Player wins!'
+    mainOutput.innerHTML = 'Player wins!'
   } else if(game.playerWins === false) {
-    output.innerHTML = 'Computer wins!'
+    mainOutput.innerHTML = 'Computer wins!'
   } else if (game.playerWins === undefined) {
-    output.innerHTML = 'DRAW!'
+    mainOutput.innerHTML = 'DRAW!'
   }
 }

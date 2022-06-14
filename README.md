@@ -24,19 +24,18 @@
 
 
 ## Illustrations
-  ![Rock, Paper, Scissors](https://frontend.turing.edu/projects/module-1/assets/dinner/dinner_0.png)
+  ![Rock, Paper, Scissors](rock-paper-scissors-assets/homepage.png)
 
 ## Features
-- Any of the radio buttons chosen will output a specific item from that array.
-- The Choose Your Own Adventure I chose was the "Entire Meal Functionality". Each button will output random items (side, main dish, dessert) OR one of each for a meal idea for any user clicking the buttons.
+- Choose a player, and check to see if you beat the computer!
 
 ## Deployed Page
 
-Visit our published Hang In There Site! [here](https://jdeloach03.github.io/whats-for-dinner/)
+Visit our published Hang In There Site! [here](https://connorcorc.github.io/rock-paper-scissors/)
 
 ## Possible Future Extensions
-  - A login page would be super cool, if it were responsive in a sense of allowing users login to be saved/recipe ideas they like to be stored within their page.
-  - Adding in transitions via CSS would have appreciated.
+  - Persisting player wins on page reload would be awesome.
+  - More enjoyable-to-look-at CSS
 
 ## Set Up
 
@@ -48,13 +47,11 @@ Visit our published Hang In There Site! [here](https://jdeloach03.github.io/what
 
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
-  -[JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
-  -[YouTube](https://www.youtube.com/)
   - [W3Schools](https://www.w3schools.com/)
 
 ## Contributors
-  - [Joshua DeLoach](https://github.com/JDeLoach03)
+  - [Connor Corcoran](https://github.com/Connorcorc)
 
 
 ## Project Specs
-  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
