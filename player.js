@@ -15,7 +15,7 @@ class Player {
 
   generatePick(array) {
     return Math.floor(Math.random() * array.length);
-  };
+  }
 
   winCount() {
     this.wins++;

@@ -18,7 +18,7 @@ classicBox.addEventListener('click', changeMainBox);
 hardBox.addEventListener('click', changeHardBox);
 imageBox.addEventListener('click', runGame)
 imageBoxTwo.addEventListener('click', runGame)
-resetGame.addEventListener('click', resetGameButton)
+changeGame.addEventListener('click', resetGameButton)
 
 
 function changeMainBox() {
@@ -42,12 +42,13 @@ function changeHardBox() {
 }
 
 function resetGameButton() {
+  mainOutput.innerHTML = 'Rock, Paper, Scissors'
+  output.innerHTML = 'Choose your game';
   classicBox.classList.remove('hidden');
   hardBox.classList.remove('hidden');
   imageBoxTwo.classList.add('hidden')
   imageBox.classList.add('hidden')
   changeGame.classList.remove('hidden')
-  output.innerHTML = 'Choose your game';
 }
 
 function reset() {
@@ -59,6 +60,11 @@ function reset() {
   fight.innerHTML = ``;
 }
 
+function updateScore() {
+  playerWins.innerHTML = `Wins: ${game.player.wins}`;
+  computerWins.innerHTML = `Wins: ${game.computer.wins}`;
+}
+
 function runGame() {
   game.player.choice = event.target.id;
   game.computer.setComputerChoice();
@@ -66,6 +72,7 @@ function runGame() {
   game.checkForDraw();
   game.winTally();
   fightScene();
+  updateScore();
   setTimeout(reset, 3000)
 }
 
@@ -76,4 +83,9 @@ function fightScene() {
   <img src="./rock-paper-scissors-assets/${game.player.choice}.png" class="img" alt="${game.player.choice}"/>
   <img src="./rock-paper-scissors-assets/${game.computer.choice}.png" class="img" alt="${game.computer.choice}"/>
   `
+  if (game.playerWins === true) {
+    output.innerHTML = 'Player wins!'
+  } else if(game.playerWins === false) {
+    output.innerHTML = 'Computer wins!'
+  }
 }
