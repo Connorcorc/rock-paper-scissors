@@ -124,8 +124,7 @@ button:hover:after {
 }
 
 .emoji {
-  height: 10px;
-  width: 10px;
+  font-size: 20px;
 }
 
 .hidden {

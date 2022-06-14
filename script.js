@@ -60,6 +60,11 @@ function reset() {
   fight.innerHTML = ``;
 }
 
+function updateScore() {
+  playerWins.innerHTML = `Wins: ${game.player.wins}`;
+  computerWins.innerHTML = `Wins: ${game.computer.wins}`;
+}
+
 function runGame() {
   game.player.choice = event.target.id;
   game.computer.setComputerChoice();
@@ -67,6 +72,7 @@ function runGame() {
   game.checkForDraw();
   game.winTally();
   fightScene();
+  updateScore();
   setTimeout(reset, 3000)
 }
 
