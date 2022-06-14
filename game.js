@@ -33,7 +33,6 @@ class Game {
 
   checkForDraw() {
     if (this.computer.choice === this.player.choice) {
-      output.innerHTML = 'DRAW!'
       this.playerWins = undefined;
     }
   }
@@ -41,10 +40,8 @@ class Game {
   winTally() {
     if (this.playerWins === true) {
       this.player.winCount();
-      // playerWins.innerHTML = `Wins: ${this.player.wins}`;
     } else if (this.playerWins === false) {
       this.computer.winCount();
-      // computerWins.innerHTML = `Wins: ${this.computer.wins}`;
     }
   }
 }
