@@ -1,8 +1,7 @@
 class Player {
-  constructor(name, token) {
+  constructor(name) {
     this.wins = 0;
-    this.token = token;
-    this.choice = '';
+    this.choice = ''
   }
 
   setComputerChoice() {
@@ -14,10 +13,10 @@ class Player {
   }
 
   generatePick(array) {
-    return Math.floor(Math.random() * array.length);
+    return Math.floor(Math.random() * array.length)
   }
 
   winCount() {
-    this.wins++;
+    this.wins++
   }
 }

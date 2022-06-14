@@ -1,9 +1,9 @@
 class Game {
   constructor(game) {
-    this.game = game;
-    this.gameIcons = [];
+    this.game = game
+    this.gameIcons = []
     this.player = new Player('Player 1')
-    this.computer = new Player('Computer');
+    this.computer = new Player('Computer')
     this.playerWins = undefined;
   }
 
@@ -17,31 +17,31 @@ class Game {
 
   checkForWin() {
     if (this.player.choice === 'rock' && (this.computer.choice === 'scissors' || this.computer.choice === 'lizard')) {
-       this.playerWins = true;
+      this.playerWins = true
     } else if (this.player.choice === 'paper' && (this.computer.choice === 'rock' || this.computer.choice === 'alien')) {
-      this.playerWins = true;
+      this.playerWins = true
     } else if (this.player.choice === 'scissors' && (this.computer.choice === 'paper' || this.computer.choice === 'lizard')) {
-      this.playerWins = true;
+      this.playerWins = true
     } else if (this.player.choice === 'lizard' && (this.computer.choice === 'paper' || this.computer.choice === 'alien')) {
-      this.playerWins = true;
+      this.playerWins = true
     } else if (this.player.choice === 'alien' && (this.computer.choice === 'scissors' || this.computer.choice === 'rock')) {
-      this.playerWins = true;
+      this.playerWins = true
     } else {
-      this.playerWins = false;
+      this.playerWins = false
     }
   }
 
   checkForDraw() {
     if (this.computer.choice === this.player.choice) {
-      this.playerWins = undefined;
+      this.playerWins = undefined
     }
   }
 
   winTally() {
     if (this.playerWins === true) {
-      this.player.winCount();
+      this.player.winCount()
     } else if (this.playerWins === false) {
-      this.computer.winCount();
+      this.computer.winCount()
     }
   }
 }
