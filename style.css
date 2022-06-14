@@ -23,6 +23,9 @@ body {
   width: 100%;
 }
 
+.fight-scene {
+  display: flex;
+}
 .sub-header-one {
   margin: -3px;
 }
@@ -47,7 +50,8 @@ body {
 }
 .image-body-one, .image-body-two {
   box-shadow: inset 0 0 0 0 #fff;
-  color: #54b3d6;
+  color: #fff;
+  font-size: 17px;
   margin: 0 -.25rem;
   padding: 0 .25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -58,9 +62,8 @@ body {
   width: 40%;
   height: 30%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
+
 }
 
 .image-body-one:hover, .image-body-two:hover {
