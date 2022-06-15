@@ -31,7 +31,7 @@
 
 ## Deployed Page
 
-Visit our published Hang In There Site! [here](https://connorcorc.github.io/rock-paper-scissors/)
+Visit my published Rock Paper Scissors! [here](https://connorcorc.github.io/rock-paper-scissors/)
 
 ## Possible Future Extensions
   - Persisting player wins on page reload would be awesome.
